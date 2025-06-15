@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Source+Sans+Pro:300,400,600,700');
+
+:root{
+    --font-heading:'PT Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;;
+}
+
+html {
+    font-size: 62.5%;
+    
+}
+
+input, 
+button, 
+select, 
+textarea {
+    font-family : inherit;
+    font-size : inherit;
+}
+
+button {
+    color: inherit;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+h1,h2,h3,h4,h5 ,h6{
+    font-family:var(--font-heading);
+}
+
+/* COMMON */
+.container {
+    width:1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* top-page */
+
+.top-page {
+
+    min-height: 496px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(../image/bg-banner.jpg) no-repeat center / cover;
+    margin-bottom: 110px;
+}
+
+.top-page .inner {
+    display:flex;
+}
+
+.header {
+    display: flex;
+    min-height: 60px;
+    margin-top: 40px;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .listnav {
+    display: flex;
+    align-items: center;
+    width:878px;
+    height:48px;
+    justify-content: center;
+
+}
+.header .listnavchild {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.listnavchild li a {
+    font-size: 15px;
+    padding:  30px;
+    text-decoration: none;
+    color:white;
+
+}
+.action-btn{
+    font-size: 15px;
+    color: white;
+    padding :10px;
+}
+
+.page-title {
+    display: flex;
+    color:white;
+    height:396px;
+    align-items: center;
+    justify-content: center;
+}
+.page-title .breadcrumdpage{
+    text-align: center;
+}
+.page-title p {
+    font-size: 15px;
+    text-decoration: none;
+}
+.page-title a {
+    text-decoration: none;
+}
+.page-title a:hover {
+    color:blueviolet;
+}
+
+.page-title h3 {
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+.main{
+    height: 1700px;
+}
+
+.main-page {
+    width:1170px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 30px;
+}
+.nav-search{
+    flex: 2.5;
+    background-color:white;
+    height:50px
+}
+.course-card {
+    flex: 7.5;
+    
+    height: 50px;
+}
+
+.search{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.search-form{
+    position: relative;
+    width:100%;
+    
+}
+.search-input{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+
+}
+.icons{
+    position: absolute;
+    right:10px;
+    padding: 10px;
+    top: 3px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-input::placeholder{
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.navlist .list{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.list .listitems {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    border:1px solid rgba(0, 0, 0, 0.09);
+    border-bottom:none ;
+    padding:0px 20px;
+}
+
+.list .listitems:last-child{
+    border-bottom:1px solid rgba(0, 0, 0, 0.09);;
+}
+.navlist h3{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.menulist{
+    display: flex;
+    width:100%;
+    height:40px;
+    background-color:white;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.listoption {
+    display: flex;
+    gap : 10px;
+    
+}
+
+.listoptionitems{
+    display:flex;
+    font-size: 15px;
+    align-items: center;
+    padding:0px 18px;
+    
+}
+
+.listoption .listoptionitems:hover{
+    background-color: #783df0;
+    color:white;
+    border-radius: 18px;
+    line-height: 40px;
+    
+}
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 66px;
+
+}
+.card{
+    display: flex;
+    gap:30px;
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+.carditems{
+    flex:0 0 calc(100%-60px)/3;
+    background-color: white;
+    height : 440px;
+    width: 33%;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.image img{
+    width:100%;
+    height: 215px;
+    transition: transform 0.5s ease;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.avartar h2 {
+    margin:10px 10px 20px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color :#464646;
+}
+
+.avartar h2:hover {
+    color: #b80257;
+}
+
+.avartar p{
+    font-size: 16px;
+    margin:10px 10px 20px 10px;
+    line-height: 25px;
+    color : grey;
+}
+
+.detail {
+    display:flex;
+    gap:10px;
+    justify-content: space-around;
+    padding : 0px 10px;
+
+}
+
+.detailavarta img {
+    float:left;
+}
+
+.detailavarta p {
+    float: left;
+}
+
+.view {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.view i {
+    margin-top: 13px;
+    font-size: 15px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.icons-price{
+    display: flex;
+    align-items: center;    
+}
+
+.price button {
+    position: relative;
+    padding-bottom : 15px;
+    margin-bottom : 15px;
+    font-size: 16px ;
+    background-color: #783df0;
+    padding:5px;
+    border-radius: 15px;
+    width :68px;
+    color :white;
+}
+
+.icons-price button {
+    position: relative;
+    padding-bottom : 15px;
+    margin-bottom : 15px;
+    font-size: 16px ;
+    background-color:#b80257;
+    padding:5px;
+    border-radius: 15px;
+    width :68px;
+    color :white;
+}
+.page{
+    margin-top: 66px;
+}
+
+.listpage {
+    display: flex;
+    gap :20px;
+    font-size: 16px;
+    align-items: center;
+    flex-direction:row;
+    
+}
+
+.listpage .pageactive {
+    width: 30px;
+    height: 30px;
+    display: flex; /* Bắt buộc để justify + align hoạt động */
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center;     /* Căn giữa dọc */
+    color : rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.listpage .pageactive:last-child{
+    width: 60px;
+    height: 30px;
+    display: flex; /* Bắt buộc để justify + align hoạt động */
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center;     /* Căn giữa dọc */
+    color : white;
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    background-color: #783df0;
+}
+
+.listpage .pageactive:hover{
+    border: 1px solid #783df0 ;
+}
+
+.footer{
+    width : 100%;
+    height : 550px;
+    background-color: black;
+}
+
+.footer-wrapper{
+    width:1170px;
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+.sholar p {
+    color: grey;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom:25px;
+}
+.sholar img {
+     margin:8px 0 18px 0;
+}
+
+.provides {
+    font-size: 15px;
+    line-height: 20px;
+    color:grey;
+
+}
+
+.box h2 {
+    
+    font-size: 20px ;
+    font-weight:700;
+    color:#fff;
+    margin:8px 0 25px 0;
+}
+
+.listbox li{
+    color: grey;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.footer-wrapper .sholar{
+    width: 268px;
+    height:260px;
+}
+
+.listsholar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 600px;
+    height:260px;
+}
+
+
+.listsholar .box {
+    width: 200px;
+}
+
+.SubcribeUs {
+    width:268px;
+    height:260px;
+} 
+.SubcribeUs h2{
+    font-size: 20px ;
+    font-weight:700;
+    color:#fff;
+    margin:8px 0 25px 0;
+}
+
+.SubcribeUs p {
+    color: grey;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom:25px;
+}
+
+.SubcribeUs input {
+    width: 100%;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 15px;
+    border-radius: 40px;
+    border : 1px solid rgba(0, 0, 0, 0.09);
+    background-color: #272727;
+    padding-left: 20px;
+}
+
+.SubcribeUs button {
+    width: 95px;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    background-color: #b80257;
+    line-height: 40px;
+    border-radius: 20px ;
+}
+
