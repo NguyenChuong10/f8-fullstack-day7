@@ -85,13 +85,50 @@ h1,h2,h3,h4,h5 ,h6{
     align-items: center;
 }
 
-.listnavchild li a {
+.listnavchild {
+    position:relative;
+
+}
+.subhome:hover .subnavchild {
+    display: block;
+}
+.subnavchild  {
+    position: absolute;
+    top:38px;
+    background-color: white;
+    width: 217px;
+    display: none;
+}
+.subnavchild li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    line-height: 50px;
+  
+}
+
+.subnavchild li:last-child{
+    border-bottom: none;
+}
+
+.subnavchild li:hover a {
+    background-color: #b80257;;
+    color:white;
+}
+
+.subnavchild li > a {
+    display: block;
+    color:black ;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 30px;
+}
+.listnavchild > li > a {
     font-size: 15px;
     padding:  30px;
     text-decoration: none;
     color:white;
-
 }
+
+
 .action-btn{
     font-size: 15px;
     color: white;
@@ -163,6 +200,7 @@ h1,h2,h3,h4,h5 ,h6{
     height: 40px;
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.09);
+    cursor:pointer;
 
 }
 .icons{
@@ -179,10 +217,18 @@ h1,h2,h3,h4,h5 ,h6{
     font-size: 16px;
 }
 
+.list li a {
+    text-decoration: none;
+}
+
 .navlist .list{
     display: flex;
     flex-direction: column;
     
+}
+
+.list .listitems:hover{
+    color:#783df0;
 }
 
 .list .listitems {
@@ -221,7 +267,10 @@ h1,h2,h3,h4,h5 ,h6{
 .listoption {
     display: flex;
     gap : 10px;
-    
+}
+
+.listoption a{
+    text-decoration: none;
 }
 
 .listoptionitems{
@@ -274,7 +323,7 @@ h1,h2,h3,h4,h5 ,h6{
 }
 
 .avartar h2 {
-    margin:10px 10px 20px 10px;
+    margin:20px 10px 20px 10px;
     font-weight: 700;
     font-size: 18px;
     color :#464646;
@@ -496,5 +545,17 @@ h1,h2,h3,h4,h5 ,h6{
     background-color: #b80257;
     line-height: 40px;
     border-radius: 20px ;
+}
+
+.SubcribeUs .email{
+    cursor: pointer;
+}
+
+.listbox li a {
+    text-decoration: none;
+}
+
+.listbox li a:hover{
+    color: #b80257;
 }
 
