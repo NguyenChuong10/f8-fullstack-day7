@@ -14,6 +14,7 @@ body{
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
     
 }
 
@@ -90,15 +91,27 @@ h1,h2,h3,h4,h5 ,h6{
 
 }
 .subhome:hover .subnavchild {
-    display: block;
+    visibility:visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 .subnavchild  {
     position: absolute;
     top:38px;
     background-color: white;
     width: 217px;
-    display: none;
+    visibility:hidden;
+    opacity: 0;
+    transform:translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+     pointer-events: none;
 }
+
+.listnavchild .subnavchild > li:hover {
+    background-color: #b80257;
+}
+
 .subnavchild li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
     line-height: 50px;
@@ -109,18 +122,33 @@ h1,h2,h3,h4,h5 ,h6{
     border-bottom: none;
 }
 
+
+
 .subnavchild li:hover a {
-    background-color: #b80257;;
     color:white;
+    transform: translateX(5px);
 }
 
 .subnavchild li > a {
     display: block;
-    color:black ;
+    position:relative;
+    z-index: 1;
+    color:rgba(0, 0, 0, 0.6);
     text-decoration: none;
     font-size: 15px;
     padding-left: 30px;
+    transform: translateX(0px);
+    transition: transform linear 500ms;
 }
+
+.formsearch{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    border:1px solid rgba(0, 0, 0, 0.09)
+    
+}
+
 .listnavchild > li > a {
     font-size: 15px;
     padding:  30px;
@@ -128,12 +156,70 @@ h1,h2,h3,h4,h5 ,h6{
     color:white;
 }
 
+.user-actions{
+    display: flex;
+}
 
-.action-btn{
+.action-btn , .action-btn-cart{
     font-size: 15px;
     color: white;
     padding :10px;
 }
+
+.action-btn {
+    position: relative;
+    
+}
+
+.search-wrapper{
+    position: absolute;
+    top:90px;
+    right: 281px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:300px;
+    height:50px;
+    background-color: white;
+    display: none;
+}
+
+.search-wrapper input {
+    position:relative;
+    top: 5px;
+    right: 5px;
+    width:90%;
+    height:80%;
+    margin: 0px 10px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    
+}
+
+.search-wrapper i {
+    position:absolute;
+    top: 5px;
+    right:6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #b80257;
+    color:white;
+    font-size:20px;
+}
+
+.action1{
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]:checked ~ .search-wrapper{
+    display: inline-block;
+}
+
+
 
 .page-title {
     display: flex;
@@ -148,9 +234,12 @@ h1,h2,h3,h4,h5 ,h6{
 .page-title p {
     font-size: 15px;
     text-decoration: none;
+    margin-top:10px;
 }
 .page-title a {
     text-decoration: none;
+    color:white;
+    transition: color ease 1ms;
 }
 .page-title a:hover {
     color:blueviolet;
@@ -227,8 +316,9 @@ h1,h2,h3,h4,h5 ,h6{
     
 }
 
-.list .listitems:hover{
+.list .listitems:hover a{
     color:#783df0;
+    transform: translateX(15px);
 }
 
 .list .listitems {
@@ -241,6 +331,12 @@ h1,h2,h3,h4,h5 ,h6{
     border:1px solid rgba(0, 0, 0, 0.09);
     border-bottom:none ;
     padding:0px 20px;
+    
+}
+
+.list .listitems a {
+    transform: translateX(0px);
+    transition: transform linear 500ms;
 }
 
 .list .listitems:last-child{
@@ -311,7 +407,16 @@ h1,h2,h3,h4,h5 ,h6{
     overflow: hidden;
     flex-wrap: wrap;
 }
+
+.carditems .image:hover ~ .avartar > h2 {
+    color: #b80257;
+}
+
+.image {
+    position:relative;
+}
 .image img{
+    position: relative;
     width:100%;
     height: 215px;
     transition: transform 0.5s ease;
@@ -320,6 +425,27 @@ h1,h2,h3,h4,h5 ,h6{
 .image img:hover {
     transform: scale(1.1);
     overflow: hidden;
+}
+
+.triangle{
+    position: absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+    border-top:80px solid #b80257;
+    border-left:80px solid transparent ;
+}
+
+.triangle i {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    color: white;
+    left: -29px;
+    top: -65px;
+    font-size: 18px;
+    transform: rotate(6deg);
 }
 
 .avartar h2 {
@@ -387,7 +513,37 @@ h1,h2,h3,h4,h5 ,h6{
     border-radius: 15px;
     width :68px;
     color :white;
+    transform: translateY(0px);
+    transition: transform ease 500ms;
 }
+
+.price button::after {
+    position: absolute;
+    display: flex;
+    content:"";
+    top:32px;
+    left: -10px;
+    width: 90px;
+    height: 8px;
+    margin-top:3px;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen trong suốt */
+    background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 80%);
+    border-radius: 50%;
+    display: none;
+}
+
+
+
+
+
+.price button:hover {
+    transform: translateY(-5px);
+}
+
+.price button:hover::after {
+    display: block;
+}
+
 
 .icons-price button {
     position: relative;
@@ -399,6 +555,31 @@ h1,h2,h3,h4,h5 ,h6{
     border-radius: 15px;
     width :68px;
     color :white;
+    transform: translateY(0px);
+    transition: transform ease 500ms;
+}
+
+.icons-price button:after{
+    position: absolute;
+    display: flex;
+    content:"";
+    top:32px;
+    left: -10px;
+    width: 90px;
+    height: 8px;
+    margin-top:3px;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen trong suốt */
+    background: radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 80%);
+    border-radius: 50%;
+    display: none;
+}
+
+.icons-price button:hover {
+    transform: translateY(-10px);
+}
+
+.icons-price button:hover::after {
+    display: block;
 }
 .page{
     margin-top: 66px;
@@ -422,9 +603,11 @@ h1,h2,h3,h4,h5 ,h6{
     color : rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
+    transition:border ease 1s , color ease 1s;
+    
 }
 
-.listpage .pageactive:last-child{
+.listpage .pageactivelast{
     width: 60px;
     height: 30px;
     display: flex; /* Bắt buộc để justify + align hoạt động */
@@ -438,6 +621,7 @@ h1,h2,h3,h4,h5 ,h6{
 
 .listpage .pageactive:hover{
     border: 1px solid #783df0 ;
+    color:#783df0
 }
 
 .footer{
@@ -484,10 +668,12 @@ h1,h2,h3,h4,h5 ,h6{
     margin:8px 0 25px 0;
 }
 
-.listbox li{
+.listbox li a{
     color: grey;
     font-size: 15px;
     line-height: 30px;
+    transition: color ease 500ms;
+    text-decoration: none;
 }
 
 .footer-wrapper .sholar{
@@ -538,6 +724,7 @@ h1,h2,h3,h4,h5 ,h6{
 }
 
 .SubcribeUs button {
+    position:relative;
     width: 95px;
     margin-top: 20px;
     color: white;
@@ -545,14 +732,59 @@ h1,h2,h3,h4,h5 ,h6{
     background-color: #b80257;
     line-height: 40px;
     border-radius: 20px ;
+    overflow: hidden;
+    z-index:1;
 }
+.SubcribeUs button span{
+    position:relative;
+    transition: color 0.5s ease;
+    z-index: 1;
+}
+.SubcribeUs button::after {
+    position :absolute;
+    content:"";
+    top:50%;
+    left:50%;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: 0;
+    
+}
+
+.SubcribeUs button:hover span {
+    color: #b80257; /* Đổi màu chữ khi hover */
+}
+
+ .SubcribeUs button:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
 
 .SubcribeUs .email{
     cursor: pointer;
 }
 
-.listbox li a {
-    text-decoration: none;
+.scrollbar {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #b80257;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom:10px;
+    right:10px;
+    font-size: 18px;
+}
+
+#top:target ~ #scrollbar {
+    display: none;
 }
 
 .listbox li a:hover{

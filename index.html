@@ -27,7 +27,10 @@
     <div class="wrapper">
         <!-- Header Section -->
         <header class="head">
-            <div class="top-page">
+            <div id="top" class="top-page">
+                <div class="scrollbar" id="scrollbar">
+                     <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+                </div>
                 <div class="container">
                     <div class="inner">
                         <!-- Navigation -->
@@ -75,11 +78,11 @@
                                             <li><a href="">sign up</a></li>
                                         </ul>
                                     </li>
-                                    <li class ="subhome">
+                                    <li class="subhome">
                                         <a href="https://themazine.com/html/scholars-lms/index.html">PORTPOLIO
 
                                         </a>
-                                    <ul class="subnavchild">
+                                        <ul class="subnavchild">
                                             <li><a href="">portfolio 2 column</a></li>
                                             <li><a href="">portfolio 3 column</a></li>
                                             <li><a href="">portfolio 4 column</a></li>
@@ -92,7 +95,8 @@
                                             <li><a href="">Blog Details</a></li>
                                         </ul>
                                     </li>
-                                    <li class="subhome"><a href="https://themazine.com/html/scholars-lms/index.html">SHOP</a>
+                                    <li class="subhome"><a
+                                            href="https://themazine.com/html/scholars-lms/index.html">SHOP</a>
                                         <ul class="subnavchild">
                                             <li><a href="">Shop page</a></li>
                                             <li><a href="">Shop Details</a></li>
@@ -101,15 +105,30 @@
                                     <li><a href="https://themazine.com/html/scholars-lms/index.html">CONTACT</a></li>
                                 </ul>
                             </div>
+
                             <div class="user-actions">
-                                <button class="action-btn">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                                <button class="action-btn">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </button>
+                                <div class="action1">
+                                    <input type="checkbox" name="more" id="more" hidden />
+                                    <label for="more" class="action-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </label>
+                                    <div class="search-wrapper">
+                                        <input type="text" placeholder="Search ...">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                </div>
+
+
+                                <div class="action2">
+                                    <button class="action-btn-cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
                             </div>
+
                         </div>
+
+
                         <!-- End Navigation -->
                     </div>
 
@@ -139,49 +158,97 @@
                     <div class="navlist">
                         <h3>Topics</h3>
                         <ul class="list">
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Web designs</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Web Development</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Data Science</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Mathematics & Stats</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Robotics</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Digital Marketing</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Android Bas</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Machine Learning</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Artificial Intelligence</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Web designs</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Web
+                                    Development</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Data
+                                    Science</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Mathematics &
+                                    Stats</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Robotics</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Digital
+                                    Marketing</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Android Bas</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Machine
+                                    Learning</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Artificial
+                                    Intelligence</a></li>
                         </ul>
                     </div>
                     <div class="navlist">
                         <h3>Software</h3>
                         <ul class="list">
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Photoshop</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">illustrator</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">HTML</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">CSS</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Java Script</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">DJanggo</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Apple</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Microsoft</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Ubuntu</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Photoshop</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">illustrator</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">HTML</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">CSS</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Java Script</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">DJanggo</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Apple</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Microsoft</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Ubuntu</a></li>
                         </ul>
                     </div>
                     <div class="navlist">
                         <h3>Level</h3>
                         <ul class="list">
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Beginner</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Intermediate</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Advanced</a></li>
-                            <li class="listitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Expert</a></li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Beginner</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Intermediate</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Advanced</a>
+                            </li>
+                            <li class="listitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Expert</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="course-card">
                     <div class="menulist">
                         <ul class="listoption">
-                            <li class="listoptionitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">New</a></li>
-                            <li class="listoptionitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Trending</a></li>
-                            <li class="listoptionitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Popular</a></li>
-                            <li class="listoptionitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Best-Selling</a></li>
-                            <li class="listoptionitems"><a href="https://themazine.com/html/scholars-lms/course-3-column.html?">Most Rated</a></li>
+                            <li class="listoptionitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">New</a></li>
+                            <li class="listoptionitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Trending</a>
+                            </li>
+                            <li class="listoptionitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Popular</a>
+                            </li>
+                            <li class="listoptionitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Best-Selling</a>
+                            </li>
+                            <li class="listoptionitems"><a
+                                    href="https://themazine.com/html/scholars-lms/course-3-column.html?">Most Rated</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="card-wrapper">
@@ -215,6 +282,9 @@
                             <div class="carditems">
                                 <div class="image">
                                     <img src="./assets/image/image2.jpg" alt="image">
+                                    <div class = "triangle">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
                                 </div>
                                 <div class="avartar">
                                     <h2>Introduction to PHP language with Ajax & Redux</h2>
@@ -240,6 +310,7 @@
                             <div class="carditems">
                                 <div class="image">
                                     <img src="./assets/image/image3.jpg" alt="image">
+                                    
                                 </div>
                                 <div class="avartar">
                                     <h2>Introduction to PHP language with Ajax & Redux</h2>
@@ -294,6 +365,9 @@
                             <div class="carditems">
                                 <div class="image">
                                     <img src="./assets/image/image2.jpg" alt="image">
+                                    <div class = "triangle">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
                                 </div>
                                 <div class="avartar">
                                     <h2>Introduction to PHP language with Ajax & Redux</h2>
@@ -373,6 +447,9 @@
                             <div class="carditems">
                                 <div class="image">
                                     <img src="./assets/image/image2.jpg" alt="image">
+                                    <div class = "triangle">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
                                 </div>
                                 <div class="avartar">
                                     <h2>Introduction to PHP language with Ajax & Redux</h2>
@@ -427,7 +504,7 @@
                             <li class="pageactive">1</li>
                             <li class="pageactive">2</li>
                             <li class="pageactive">3</li>
-                            <li class="pageactive">Next</li>
+                            <li class="pageactivelast">Next</li>
                         </ul>
                     </div>
                 </div>
@@ -469,20 +546,26 @@
                         <div class="box">
                             <h2>Product</h2>
                             <ul class="listbox">
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education Lights</a></li>
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education starter</a></li>
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education Premium</a></li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education Lights</a>
+                                </li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education
+                                        starter</a></li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Education
+                                        Premium</a></li>
                                 <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Business</a></li>
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Business Plus</a></li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Business Plus</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="box">
                             <h2>Support</h2>
                             <ul class="listbox">
                                 <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Support</a></li>
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Toll free number</a></li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Toll free number</a>
+                                </li>
                                 <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Open ticket</a></li>
-                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">System requirements</a></li>
+                                <li><a href="https://themazine.com/html/scholars-lms/about-us.html">System
+                                        requirements</a></li>
                                 <li><a href="https://themazine.com/html/scholars-lms/about-us.html">Feedback</a></li>
                             </ul>
                         </div>
@@ -492,12 +575,15 @@
                         <p>Subcribe us to get all the latest news from us</p>
                         <label for="">
                             <input type="email" name="email" class="email" id="email" placeholder="Your email">
-                            <button>SEND</button>
+                            <button><span>SEND</span></button>
                         </label>
                     </div>
-                </div>a
-            </div </footer>
-            <!-- End Footer Section -->
+                </div>
+            </div>
+        </footer>
+
+        <!-- End Footer Section -->
     </div>
 </body>
+
 </html>
